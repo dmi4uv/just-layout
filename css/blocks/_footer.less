@@ -1,0 +1,86 @@
+// main: ../style.less
+
+.footer {
+    background-color: @black;
+    padding: 1.35rem 0;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+   
+}
+
+.footer__nav {
+    display: flex;
+    align-items: center;
+    @media @tablet {
+        width: 100%;
+        justify-content: center;
+    }
+    @media @mobile-sm  {
+        flex-wrap: wrap;
+    }
+}
+
+.footer__link {
+    font-size: .93rem;
+    text-decoration: none;
+    color: @gray;
+    margin-right: 1.2rem;
+    transition: color .2s linear;
+
+    &:hover {
+        color: @white;
+    }
+
+    +.btn {
+        min-width: 7rem;
+        padding: .5rem 0;
+        margin-right: 0;
+        transition: color .2s linear, background-color .2s linear;
+
+        &:hover {
+            background-color: @white;
+            color: @gray;
+        }
+    }
+    @media @mobile-sm  {
+       margin-right: 1rem;
+    }
+}
+
+.footer__credits {
+    display: flex;
+    color: @gray;
+    align-items: center;
+    font-size: .93rem;
+    
+    @media @tablet {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    @media @mobile-sm  {
+        flex-direction: column;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.footer__copy {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    border-right: 1px solid @gray;
+    @media @mobile-sm  {
+       
+        border-right: none;
+    }
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+}
